@@ -1,6 +1,11 @@
 # react-grocery-bud
 
-Shopping list app. Items can be added, removed, and edited. When an item is added, an alert is displayed. There's also an option to clear the list.
+Shopping list app.
+
+- Items can be added, removed, and edited.
+- List can be cleared.
+- When an item is added or removed, an alert is displayed.
+- Data is persisted in local storage.
 
 To view, run `npm i && npm start` in downloaded project.
 
