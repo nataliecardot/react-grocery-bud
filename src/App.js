@@ -62,9 +62,11 @@ function App() {
       </form>
       <div className="grocery-container">
         <List items={list} />
-        <button className="clear-btn" onClick={clearList}>
-          Clear Items
-        </button>
+        {list.length > 0 && (
+          <button className="clear-btn" onClick={clearList}>
+            Clear Items
+          </button>
+        )}
       </div>
     </section>
   );
