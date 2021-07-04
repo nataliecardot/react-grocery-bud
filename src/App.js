@@ -8,12 +8,17 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   // ID for item being edited
   const [editID, setEditID] = useState(null);
-  const [alert, setAlert] = useState({ show: false, msg: '', type: '' });
+  const [alert, setAlert] = useState({
+    show: false,
+    msg: '',
+    type: '',
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) {
       // display alert if value is empty
+      setAlert({ show: true, msg: 'Please enter a value', type: 'danger' });
     } else if (name && isEditing) {
       // deal with edit
     } else {
@@ -28,7 +33,7 @@ function App() {
     <section className="section-center">
       {/* alternative to onSubmit on form is onClick on a button */}
       <form className="grocery-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert />}
+        {alert.show && <Alert {...alert} />}
         <h3>Grocery Bud</h3>
         <div className="form-control">
           <input

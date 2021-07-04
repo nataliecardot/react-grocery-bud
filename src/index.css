@@ -182,7 +182,6 @@ Grocery List
   font-size: 0.7rem;
   border-radius: 0.25rem;
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
 }
 .alert-danger {
   color: #721c24;
