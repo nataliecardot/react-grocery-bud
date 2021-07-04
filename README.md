@@ -3,7 +3,7 @@
 Shopping list app.
 
 - Items can be added, removed, and edited.
-- List can be cleared.
+- List can be cleared with conditionally displayed button.
 - When an item is added or removed, an alert is displayed.
 - Data is persisted in local storage.
 
