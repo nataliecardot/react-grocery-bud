@@ -22,7 +22,7 @@ function App() {
     } else if (name && isEditing) {
       // deal with edit
     } else {
-      // show alert
+      showAlert(true, 'Item added', 'success');
       const newItem = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItem]);
       setName('');
@@ -38,7 +38,7 @@ function App() {
     <section className="section-center">
       {/* alternative to onSubmit on form is onClick on a button */}
       <form className="grocery-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} />}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
         <h3>Grocery Bud</h3>
         <div className="form-control">
           <input
