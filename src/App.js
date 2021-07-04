@@ -18,7 +18,7 @@ function App() {
     e.preventDefault();
     if (!name) {
       // display alert if value is empty
-      setAlert({ show: true, msg: 'Please enter a value', type: 'danger' });
+      showAlert(true, 'Please enter a value', 'danger');
     } else if (name && isEditing) {
       // deal with edit
     } else {
@@ -27,6 +27,11 @@ function App() {
       setList([...list, newItem]);
       setName('');
     }
+  };
+
+  // using ES6 default parameters
+  const showAlert = (show = false, msg = '', type = '') => {
+    setAlert({ show, type, msg });
   };
 
   return (
