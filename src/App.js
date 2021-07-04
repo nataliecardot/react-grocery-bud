@@ -34,6 +34,11 @@ function App() {
     setAlert({ show, type, msg });
   };
 
+  const clearList = () => {
+    showAlert(true, 'List cleared', 'success');
+    setList([]);
+  };
+
   return (
     <section className="section-center">
       {/* alternative to onSubmit on form is onClick on a button */}
@@ -57,7 +62,9 @@ function App() {
       </form>
       <div className="grocery-container">
         <List items={list} />
-        <button className="clear-btn">Clear Items</button>
+        <button className="clear-btn" onClick={clearList}>
+          Clear Items
+        </button>
       </div>
     </section>
   );
