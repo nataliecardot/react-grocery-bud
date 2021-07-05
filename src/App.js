@@ -39,6 +39,11 @@ function App() {
     setList([]);
   };
 
+  const removeItem = (id) => {
+    showAlert(true, 'Item removed', 'success');
+    setList(list.filter((item) => item.id !== id));
+  };
+
   return (
     <section className="section-center">
       {/* alternative to onSubmit on form is onClick on a button */}
@@ -61,7 +66,7 @@ function App() {
         </div>
       </form>
       <div className="grocery-container">
-        <List items={list} />
+        <List items={list} removeItem={removeItem} />
         {list.length > 0 && (
           <button className="clear-btn" onClick={clearList}>
             Clear Items
