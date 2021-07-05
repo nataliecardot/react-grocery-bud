@@ -48,7 +48,7 @@ function App() {
     <section className="section-center">
       {/* alternative to onSubmit on form is onClick on a button */}
       <form className="grocery-form" onSubmit={handleSubmit}>
-        {alert.show && <Alert {...alert} removeAlert={showAlert} />}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
         <h3>Grocery Bud</h3>
         <div className="form-control">
           <input
