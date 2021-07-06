@@ -8,7 +8,7 @@ const Alert = ({ type, msg, removeAlert, list }) => {
     // cleanup function
     return () => clearTimeout(timeout);
     // adding list to dependency array to this useEffect will be run whenever list changes, and not just on first render only as with an empty array
-  }, [list]);
+  }, [list, removeAlert]);
 
   return <p className={`alert alert-${type}`}>{msg}</p>;
 };
